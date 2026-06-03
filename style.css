@@ -143,3 +143,10 @@ select:focus{border-color:#fff}
   .page-hero h1{max-width:310px;font-size:38px}
   .page-hero p:not(.eyebrow){max-width:300px}
 }
+
+
+.seo-brand-section{background:linear-gradient(135deg,#111,#050505);border:1px solid var(--line);border-radius:38px;margin-top:40px;padding:56px 24px}
+.seo-intro{max-width:980px;margin:0 auto 28px;color:var(--muted);line-height:1.85;font-size:17px}
+.keyword-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:1000px;margin:0 auto}
+.keyword-pills span{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#fff;border-radius:999px;padding:10px 14px;font-size:12px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+@media(max-width:620px){.seo-brand-section{padding:34px 18px}.keyword-pills{justify-content:flex-start}.keyword-pills span{font-size:11px}}
