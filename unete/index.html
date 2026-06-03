@@ -119,10 +119,10 @@
     </form>
   </section>
   <section id="club" class="tab-panel">
-    <form class="form-card" action="https://formspree.io/f/xqejnayw" method="POST" enctype="multipart/form-data">
+    <form class="form-card" action="https://formspree.io/f/xqejnayw" method="POST">
       <input type="hidden" name="_subject" value="Nueva solicitud para Dub Edition">
       <h2>Formar parte del club</h2>
-      <p>Envíanos tus datos y una pequeña descripción de tu coche. Puedes subir máximo 2 fotos.</p>
+      <p>Envíanos tus datos y una pequeña descripción de tu coche.</p>
       <label>Nombre<input name="nombre" type="text" placeholder="Tu nombre" required></label>
       <label>Número<input name="numero" type="tel" placeholder="+34 ..." required></label>
       <label>Email<input name="email" type="email" placeholder="tu@email.com" required></label>
@@ -151,8 +151,6 @@
         </select>
       </label>
       <label>Modificaciones<textarea name="modificaciones" rows="7" placeholder="Cuéntanos qué lleva tu coche: estética, llantas, suspensión, escape, stage, interior..." required></textarea></label>
-      <label>Fotos del coche<input id="carPhotos" name="fotos" type="file" accept="image/*" multiple></label>
-      <p class="small-text">Máximo 2 fotos. El navegador avisará si seleccionas más.</p>
       <input type="text" name="_gotcha" style="display:none">
       <button class="btn btn-primary" type="submit">ENVIAR SOLICITUD</button>
     </form>
