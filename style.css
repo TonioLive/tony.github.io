@@ -150,3 +150,32 @@ select:focus{border-color:#fff}
 .keyword-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:1000px;margin:0 auto}
 .keyword-pills span{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);color:#fff;border-radius:999px;padding:10px 14px;font-size:12px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
 @media(max-width:620px){.seo-brand-section{padding:34px 18px}.keyword-pills{justify-content:flex-start}.keyword-pills span{font-size:11px}}
+
+/* Protección básica contra selección y arrastre */
+body {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Evitar arrastrar imágenes */
+img,
+.gallery-card,
+.photo-card,
+.mock-feed div,
+.hero,
+.page-hero {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/* Mantener formularios utilizables */
+input,
+textarea,
+select,
+button,
+label {
+  -webkit-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
