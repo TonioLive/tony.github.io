@@ -46,3 +46,29 @@ document.querySelectorAll('form').forEach(form => {
     }
   });
 });
+
+// Bloquear clic derecho
+document.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+});
+
+// Evitar arrastrar imágenes o elementos visuales
+document.addEventListener("dragstart", function (event) {
+  event.preventDefault();
+});
+
+// Bloquear algunos atajos típicos de copiar/guardar/inspeccionar
+document.addEventListener("keydown", function (event) {
+  const key = event.key.toLowerCase();
+
+  if (
+    (event.ctrlKey && key === "c") ||
+    (event.ctrlKey && key === "s") ||
+    (event.ctrlKey && key === "u") ||
+    (event.ctrlKey && event.shiftKey && key === "i") ||
+    (event.ctrlKey && event.shiftKey && key === "j") ||
+    key === "f12"
+  ) {
+    event.preventDefault();
+  }
+});
