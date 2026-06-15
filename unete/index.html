@@ -3,23 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Dub Edition VLC: club automovilístico de Valencia. Rutas, eventos, comunidad y cultura del motor.">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" href="../favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta name="theme-color" content="#000000">
+<title>Únete a Dub Edition VLC | Club automovilístico Valencia</title>
+<meta name="description" content="Únete a Dub Edition VLC, club automovilístico en Valencia. Solicitud para formar parte del club o colaborar como empresa del sector motor.">
+<link rel="canonical" href="https://dubedition.es/unete/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Dub Edition VLC">
+<meta property="og:title" content="Únete a Dub Edition VLC | Club automovilístico Valencia">
+<meta property="og:description" content="Únete a Dub Edition VLC, club automovilístico en Valencia. Solicitud para formar parte del club o colaborar como empresa del sector motor.">
+<meta property="og:url" content="https://dubedition.es/unete/">
+<meta property="og:image" content="https://dubedition.es/assets/photos/home-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Únete a Dub Edition VLC | Club automovilístico Valencia">
+<meta name="twitter:description" content="Únete a Dub Edition VLC, club automovilístico en Valencia. Solicitud para formar parte del club o colaborar como empresa del sector motor.">
+<meta name="twitter:image" content="https://dubedition.es/assets/photos/home-hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 <script defer src="../script.js"></script>
-<title>Únete | Dub Edition VLC</title>
 </head>
 <body>
 <header class="site-header">
   <a href="../" class="brand brand-logo" aria-label="Dub Edition inicio">
-    <img src="../assets/dub-edition-logo-white.png" alt="Dub Edition">
+    <img src="../assets/dub-edition-logo-white.png" alt="Logo Dub Edition VLC">
     <span class="sr-only">Dub Edition</span>
   </a>
   <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
   <nav class="main-nav" aria-label="Navegación principal">
-    <a class="" href="index.html">Inicio</a><a class="" href="kdds.html">KDDs</a><a class="active" href="rutas.html">Rutas</a><a class="" href="eventos.html">Eventos</a><a class="" href="comunidad.html">Comunidad</a><a class="" href="unete.html">Únete</a>
+    <a class="" href="../">INICIO</a>
+    <a class="" href="../merch/">DUB SHOP</a>
+    <div class="nav-dropdown ">
+      <button class="nav-dropdown-toggle" type="button" aria-expanded="false">DUBEDITION</button>
+      <div class="nav-dropdown-menu">
+        <a href="../kdds/">KDDS</a>
+        <a href="../rutas/">RUTAS</a>
+        <a href="../eventos/">EVENTOS</a>
+        <a href="../comunidad/">COMUNIDAD</a>
+      </div>
+    </div>
+    <a class="active" href="../unete/">ÚNETE</a>
+    <a class="nav-cart-link " href="../checkout/">CARRITO <span class="nav-cart-total" data-cart-total>0,00 €</span></a>
   </nav>
 </header>
 
@@ -101,10 +131,10 @@
     </form>
   </section>
   <section id="club" class="tab-panel">
-    <form class="form-card" action="https://formspree.io/f/xqejnayw" method="POST" enctype="multipart/form-data">
+    <form class="form-card" action="https://formspree.io/f/xqejnayw" method="POST">
       <input type="hidden" name="_subject" value="Nueva solicitud para Dub Edition">
       <h2>Formar parte del club</h2>
-      <p>Envíanos tus datos y una pequeña descripción de tu coche. Puedes subir máximo 2 fotos.</p>
+      <p>Envíanos tus datos y una pequeña descripción de tu coche.</p>
       <label>Nombre<input name="nombre" type="text" placeholder="Tu nombre" required></label>
       <label>Número<input name="numero" type="tel" placeholder="+34 ..." required></label>
       <label>Email<input name="email" type="email" placeholder="tu@email.com" required></label>
@@ -133,8 +163,6 @@
         </select>
       </label>
       <label>Modificaciones<textarea name="modificaciones" rows="7" placeholder="Cuéntanos qué lleva tu coche: estética, llantas, suspensión, escape, stage, interior..." required></textarea></label>
-      <label>Fotos del coche<input id="carPhotos" name="fotos" type="file" accept="image/*" multiple></label>
-      <p class="small-text">Máximo 2 fotos. El navegador avisará si seleccionas más.</p>
       <input type="text" name="_gotcha" style="display:none">
       <button class="btn btn-primary" type="submit">ENVIAR SOLICITUD</button>
     </form>
@@ -154,7 +182,8 @@
   <div class="footer-links">
     <a href="https://www.instagram.com/dubeditionvlc" target="_blank" rel="noopener">Instagram</a>
     <a href="https://www.instagram.com/channel/AbYgdCJDxc26Cs2u/?igsh=MzJocHFnZHQ5ZnM3" target="_blank" rel="noopener">Canal</a>
-    <a href="../unete/">Únete</a>
+    <a href="../merch/">DUB SHOP</a>
+    <a href="../unete/">ÚNETE</a>
   </div>
 </footer>
 </body>

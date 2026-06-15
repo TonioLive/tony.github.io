@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" href="../favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta name="theme-color" content="#000000">
+<title>Finalizar pedido merch | Dub Edition™ 2026</title>
+<meta name="description" content="Finaliza tu pedido de merch Dub Edition™ 2026. Revisa el carrito, calcula envío, añade tus datos y envía la solicitud de compra.">
+<link rel="canonical" href="https://dubedition.es/checkout/">
+<meta name="robots" content="noindex, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Dub Edition VLC">
+<meta property="og:title" content="Finalizar pedido merch | Dub Edition™ 2026">
+<meta property="og:description" content="Revisa el carrito, calcula envío y envía tu pedido de merch Dub Edition.">
+<meta property="og:url" content="https://dubedition.es/checkout/">
+<meta property="og:image" content="https://dubedition.es/assets/photos/dubshop-hero-horizontal.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Finalizar pedido merch | Dub Edition™ 2026">
+<meta name="twitter:description" content="Revisa el carrito, calcula envío y envía tu pedido de merch Dub Edition.">
+<meta name="twitter:image" content="https://dubedition.es/assets/photos/dubshop-hero-horizontal.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<script defer src="../script.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a href="../" class="brand brand-logo" aria-label="Dub Edition inicio">
+    <img src="../assets/dub-edition-logo-white.png" alt="Logo Dub Edition VLC">
+    <span class="sr-only">Dub Edition</span>
+  </a>
+  <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+  <nav class="main-nav" aria-label="Navegación principal">
+    <a class="" href="../">INICIO</a>
+    <a class="" href="../merch/">DUB SHOP</a>
+    <div class="nav-dropdown ">
+      <button class="nav-dropdown-toggle" type="button" aria-expanded="false">DUBEDITION</button>
+      <div class="nav-dropdown-menu">
+        <a href="../kdds/">KDDS</a>
+        <a href="../rutas/">RUTAS</a>
+        <a href="../eventos/">EVENTOS</a>
+        <a href="../comunidad/">COMUNIDAD</a>
+      </div>
+    </div>
+    <a class="" href="../unete/">ÚNETE</a>
+    <a class="nav-cart-link active" href="../checkout/">CARRITO <span class="nav-cart-total" data-cart-total>0,00 €</span></a>
+  </nav>
+</header>
+<main>
+<section class="page-hero checkout-bg reveal">
+  <p class="eyebrow">Pasarela de pedido · Dub Edition™</p>
+  <h1>Finalizar pedido.</h1>
+  <p>Revisa tu carrito, elige cómo quieres recibirlo y envía tus datos. No se realiza pago automático: te contactaremos para confirmar disponibilidad y cerrar Bizum, transferencia o pago en KDD.</p>
+</section>
+
+<section class="section checkout-layout reveal">
+  <aside class="checkout-summary cart-panel" aria-label="Resumen final del pedido">
+    <div class="cart-sticky checkout-sticky">
+      <p class="eyebrow">Resumen</p>
+      <h2>Tu carrito</h2>
+      <div id="cartItems" class="cart-items"><p class="empty-cart">Todavía no has añadido productos.</p></div>
+      <div class="cart-totals">
+        <div><span>Subtotal</span><strong id="cartSubtotal">0,00 €</strong></div>
+        <div><span>Envío</span><strong id="cartShipping">0,00 €</strong></div>
+        <div class="cart-total"><span>Total</span><strong id="cartTotal">0,00 €</strong></div>
+      </div>
+      <div class="cart-actions">
+        <a class="btn btn-ghost" href="../merch/">SEGUIR COMPRANDO</a>
+        <button id="clearCart" class="cart-clear" type="button">Vaciar carrito</button>
+      </div>
+      <p class="small-text">El total se actualiza según la opción de entrega. Envío general 5,50 €. Solo pegatinas: 1 €.</p>
+    </div>
+  </aside>
+
+  <form id="merchOrderForm" class="form-card checkout-form merch-order-form" action="https://formspree.io/f/xwvjypvp" method="POST">
+    <input type="hidden" name="_subject" value="Nuevo pedido merch Dub Edition">
+    <input type="hidden" name="pedido" id="pedidoResumen">
+    <input type="hidden" name="subtotal" id="pedidoSubtotal">
+    <input type="hidden" name="envio" id="pedidoEnvio">
+    <input type="hidden" name="total" id="pedidoTotal">
+
+    <h2>Datos del pedido</h2>
+    <p>Completa tus datos para que podamos confirmar el pedido, disponibilidad, pago y entrega.</p>
+
+    <div class="checkout-field-grid">
+      <label>Nombre completo<input name="nombre" type="text" placeholder="Tu nombre" required></label>
+      <label>Teléfono / WhatsApp<input name="telefono" type="tel" placeholder="+34 ..." required></label>
+      <label>Email<input name="email" type="email" placeholder="tu@email.com" required></label>
+      <label>Instagram<input name="instagram" type="text" placeholder="@usuario"></label>
+    </div>
+
+    <div class="checkout-payment-box">
+      <p class="eyebrow">Pago y entrega</p>
+      <label>Método de pago<select name="metodo_pago" required><option value="">Selecciona una opción</option><option>Bizum</option><option>Transferencia</option><option>Pago en KDD</option></select></label>
+      <label>Entrega<select id="merchDelivery" name="entrega" required><option value="recogida">Recogida en KDD</option><option value="envio">Envío a domicilio 24/72 h</option></select></label>
+      <div id="shippingAddress" class="shipping-address" hidden>
+        <label>Dirección completa<textarea name="direccion" rows="3" placeholder="Calle, número, piso, código postal, ciudad y provincia"></textarea></label>
+        <p class="small-text">Envío a domicilio 24/72 h. Envío general: 5,50 €. Si el pedido es solo de pegatinas: 1 €. El coste no varía por cantidad.</p>
+      </div>
+    </div>
+
+    <label>Comentarios<textarea name="comentarios" rows="4" placeholder="Dudas de talla, preferencia de entrega, horario, etc."></textarea></label>
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button class="btn btn-primary checkout-submit" type="submit">ENVIAR PEDIDO</button>
+    <p class="small-text">Esto no es una pasarela de pago automática. Recibirás confirmación para pagar por Bizum, transferencia o en KDD.</p>
+  </form>
+</section>
+</main>
+<footer class="site-footer reveal">
+  <div>
+    <p class="eyebrow">DUB EDITION VLC</p>
+    <h2>Seguimos en lo nuestro.</h2>
+    <p>Rutas, eventos, comunidad, merch oficial y cultura del motor desde Valencia.</p>
+  </div>
+  <div class="footer-links">
+    <a href="https://www.instagram.com/dubeditionvlc" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.instagram.com/channel/AbYgdCJDxc26Cs2u/?igsh=MzJocHFnZHQ5ZnM3" target="_blank" rel="noopener">Canal</a>
+    <a href="../merch/">DUB SHOP</a>
+    <a href="../unete/">ÚNETE</a>
+  </div>
+</footer>
+</body>
+</html>
